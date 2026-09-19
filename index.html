@@ -1,79 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Copley Customs</title>
+  <title>Copley Customs</title>
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #fff8fb;
-  color: #30252b;
-  line-height: 1.6;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-header {
-  background: linear-gradient(135deg, #f8d8e8, #eadcf8);
-  text-align: center;
-  padding: 55px 20px;
-  border-bottom: 3px solid #30252b;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8fb;
+      color: #30252b;
+      line-height: 1.6;
+    }
 
-header h1 {
-  font-size: 45px;
-  letter-spacing: 3px;
-}
+    header {
+      background: linear-gradient(135deg, #f7b6d2, #d9b8ff);
+      text-align: center;
+      padding: 70px 20px;
+      border-bottom: 4px solid #30252b;
+    }
 
-header p {
-  font-size: 18px;
-  margin-top: 10px;
-}
+    header h1 {
+      font-size: 48px;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
 
-nav {
-  background: #30252b;
-  text-align: center;
-  padding: 13px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+    header p {
+      font-size: 19px;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: bold;
-}
+    nav {
+      background: #30252b;
+      text-align: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-section {
-  max-width: 1050px;
-  margin: auto;
-  padding: 55px 20px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
 
-h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 25px;
-}
+    nav a:hover {
+      color: #f7b6d2;
+    }
 
-.about {
-  text-align: center;
-  max-width: 700px;
-  margin: auto;
-  font-size: 17px;
-}
+    section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 60px 20px;
+    }
 
-.quote {
-  background: #30252b;
-  color: white;
-  text-align: center;
-  padding: 
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .quote {
+      background: #30252b;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+      margin: 20px 0;
+      font-size: 22px;
+      font-style: italic;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .product h3 {
+      margin-top: 15px;
+      font-size: 21px;
+    }
+
+    .product p {
+      margin-top: 5px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #f7b6d2;
+      border-radius: 20px;
+      padding: 40px 20px;
+    }
+
+    .contact p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    .contact a {
+      color: #30252b;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #30252b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 36px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product img {
+        height: auto;
+        max-height: 500px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Copley Customs</h1>
+    <p>Custom clothing made with creativity, confidence & love ♡</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#work">My Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Copley Customs ♡</h2>
+
+    <div class="about">
+      <p>
+        Welcome to Copley Customs! I create unique, custom-designed
+        clothing pieces that are made to stand out.
+        Every piece is handmade with creativity and care.
+      </p>
+    </div>
+
+    <div class="quote">
+      "Wear something that was made just for you."
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Copley Customs</h2>
+
+    <div class="about">
+      <p>
+        Copley Customs is a small custom clothing business focused on
+        turning ordinary clothes into one-of-a-kind pieces.
+        From custom bleach designs to creative shirts and hoodies,
+        every design is made to be unique.
+      </p>
+
+      <br>
+
+      <p>
+        Thank you for supporting my small business! ♡
+      </p>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Recent Custom Work ✨</h2>
+
+    <div class="products">
+
+      <div class="product">
+        <img src="recent-hoodie-shark.jpg" alt="Custom shark hoodie">
+        <h3>Custom Shark Hoodie</h3>
+        <p>One-of-a-kind custom hoodie design.</p>
+      </div>
+
+      <div class="product">
+        <img src="recent-hoodie-stars.jpg" alt="Custom stars hoodie">
+        <h3>Custom Stars Hoodie</h3>
+        <p>Hand-designed custom hoodie.</p>
+      </div>
+
+      <div class="product">
+        <img src="recent-hoodie-sun.jpg" alt="Custom sun hoodie">
+        <h3>Custom Sun Hoodie</h3>
+        <p>Unique custom bleach design.</p>
+      </div>
+
+      <div class="product">
+        <img src="recent-shirt-moth.jpg" alt="Custom moth shirt">
+        <h3>Custom Moth Shirt</h3>
+        <p>Creative custom shirt design.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Let's Create Something ♡</h2>
+
+      <p>Interested in a custom piece?</p>
+      <p><strong>Contact me:</strong></p>
+
+      <p>📞 740-656-3764</p>
+
+      <p>
+        📧
+        <a href="mailto:auroracopley39@gmail.com">
+          auroracopley39@gmail.com
+        </a>
+      </p>
+
+      <p>📍 Chillicothe, Ohio</p>
+
+      <p style="margin-top: 20px;">
+        <strong>#Copley_Customs</strong>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Copley Customs ♡</p>
+    <p>Custom clothing made with creativity.</p>
+  </footer>
+
+</body>
+</html>
